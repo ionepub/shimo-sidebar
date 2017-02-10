@@ -1,0 +1,150 @@
+/* switch button start */
+.tgl{display:none}
+.tgl,.tgl *,.tgl :after,.tgl :before,.tgl+.tgl-btn,.tgl:after,.tgl:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.tgl ::-moz-selection,.tgl :after::-moz-selection,.tgl :before::-moz-selection,.tgl+.tgl-btn::-moz-selection,.tgl::-moz-selection,.tgl:after::-moz-selection,.tgl:before::-moz-selection{background:0 0}
+.tgl ::selection,.tgl :after::selection,.tgl :before::selection,.tgl+.tgl-btn::selection,.tgl::selection,.tgl:after::selection,.tgl:before::selection{background:0 0}
+.tgl+.tgl-btn{outline:0;display:block;width:4em;height:2em;position:relative;cursor:pointer}
+.tgl+.tgl-btn:after,.tgl+.tgl-btn:before{position:relative;display:block;content:"";width:50%;height:100%}
+.tgl+.tgl-btn:after{left:0}
+.tgl+.tgl-btn:before{display:none}
+.tgl:checked+.tgl-btn:after{left:50%}
+
+
+.tgl-ios+.tgl-btn{background:#e5e5e5;border-radius:2em;padding:2px;-webkit-transition:all .4s ease;transition:all .4s ease;border:1px solid #e8eae9}
+.tgl-ios+.tgl-btn:after{border-radius:2em;background:#fbfbfb;-webkit-transition:left .3s cubic-bezier(.175,.885,.32,1.275),padding .3s ease,margin .3s ease;transition:left .3s cubic-bezier(.175,.885,.32,1.275),padding .3s ease,margin .3s ease;-webkit-box-shadow:0 0 0 1px rgba(0,0,0,.1),0 4px 0 rgba(0,0,0,.08);box-shadow:0 0 0 1px rgba(0,0,0,.1),0 4px 0 rgba(0,0,0,.08)}
+.tgl-ios+.tgl-btn:active{-webkit-box-shadow:inset 0 0 0 2em #e8eae9;box-shadow:inset 0 0 0 2em #e8eae9}
+.tgl-ios+.tgl-btn:active:after{padding-right:.8em}
+.tgl-ios:checked+.tgl-btn{background:#86d993}
+.tgl-ios:checked+.tgl-btn:active{-webkit-box-shadow:none;box-shadow:none}
+.tgl-ios:checked+.tgl-btn:active:after{margin-left:-.8em}
+/* switch button end */
+
+
+#appFolderWrap{
+    width: 420px;
+    height: 440px;
+    position: fixed;
+    bottom: 10px;
+    left: -670px;
+    padding: 40px 20px 20px 0;
+    background-color: hsla(0,0%,96%,.97);
+    border: 1px solid #d5d5d5;
+    border-left: 0 none;
+    box-shadow: 0 0 18px rgba(0,0,0,.2);
+    -webkit-transition: left .2s ease-in;
+    transition: left .2s ease-in;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#appFolderWrap .app-folder-wrap{
+    width: auto;
+    height: 100%;
+}
+
+#appFolderWrap .app-folder-list{
+	border-left: 1px solid #e5e5e5;
+	width: 139px;
+	height: 100%;
+	float: left;
+}
+
+#appFolderWrap .app-folder-list ul{
+	width: 139px;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#appFolderWrap .app-folder-list ul li{
+	width: 120px;
+	height: 36px;
+	line-height: 36px;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	margin: 5px 0 5px 5px;
+}
+
+#appFolderWrap .app-folder-list ul li:hover,
+#appFolderWrap .app-folder-list ul li.active{
+	border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    background: #f3f4f5;
+}
+
+#appFolderWrap .app-folder-list ul li a{
+	width: 112px;
+    height: 30px;
+    display: inline-block;
+    padding: 0 5px;
+    margin: 3px 0;
+}
+
+#appFolderWrap .app-folder-list ul li i{
+	background-image: url(https://assets-cdn.shimo.im/assets/images/desktop_list/file_icons-6928d09edc.png);
+    background-size: 170px 70px;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    float: left;
+}
+
+#appFolderWrap .app-folder-list ul li.doc i{
+    background-position: 0 0;
+}
+
+#appFolderWrap .app-folder-list ul li.xls i{
+    background-position: -26px 0;
+}
+
+#appFolderWrap .app-folder-list ul li.folder i{
+    background-position: -52px 0;
+}
+
+#appFolderWrap .app-folder-list ul li.desktop i{
+    background-image: url(https://dn-shimo-image.qbox.me/5XsTJjhDhGsNlW5o/image.png);
+    background-size: 16px 16px;
+	background-position: 5px 5px;
+}
+
+#appFolderWrap .app-folder-list ul li span{
+	width: 86px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+	display: inline-block;
+}
+
+#appFolderWrap .app-folder-close{
+    background: url(https://dn-shimo-image.qbox.me/pDQAKjLeymc58nzV/close.png) no-repeat center;
+    display: inline-block;
+    color: #888;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+#appFolderWrap .app-folder-setting{
+    display: inline-flex;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    height: 30px;
+    line-height: 25px;
+    width: 300px;
+}
+
+#appFolderWrap .app-folder-setting span{
+    display: inline-block;
+}
