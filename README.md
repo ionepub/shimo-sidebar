@@ -7,6 +7,8 @@
 
 效果：
 
+**第一列展示的是我的桌面和标星文档/文件夹**
+
 ![](https://dn-shimo-image.qbox.me/8Dtq0U5X6aErtIEj/image.png)
 
 ![](https://dn-shimo-image.qbox.me/suKpnsjriWsg94qQ/image.png)
