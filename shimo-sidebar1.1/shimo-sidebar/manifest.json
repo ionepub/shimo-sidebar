@@ -1,0 +1,23 @@
+{
+	"name": "石墨文档侧边栏工具",
+	"version": "1.0",
+	"permissions": ["storage"],
+	"manifest_version": 2,
+	"description": "在石墨文档(shimo.im)的文档和表格页面左侧增加文档目录列表，可以选择是否在新窗口打开文档。",
+	"browser_action": {
+		"default_icon": "image/icon.png",
+		"default_popup": "popup.html"
+	},
+	"icons": {
+		"48": "image/icon48.png",
+		"128": "image/icon128.png"
+    },
+	"content_scripts": [
+		{
+		  "matches": ["https://shimo.im/doc/*", "https://shimo.im/spreadsheet/*"],
+		  "css": ["css/app.css"],
+		  "js": ["js/jquery.min.js", "js/app.js"]
+		}
+	]
+
+}

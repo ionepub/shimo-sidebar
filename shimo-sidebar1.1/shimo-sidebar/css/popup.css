@@ -1,0 +1,25 @@
+/* popup.html */
+#popupWrap{
+
+}
+#popupWrap ul{
+	margin: 0;
+	padding: 0;
+}
+#popupWrap ul li{
+	list-style-type: none;
+	width: 80px;
+	height: 30px;
+}
+#popupWrap ul li a{
+	width: 100%;
+	display: block;
+	background: url(https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png) no-repeat;
+	background-size: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-indent: 35px;
+	color: #333;
+	text-decoration: none;
+	font-size: 14px;
+}
